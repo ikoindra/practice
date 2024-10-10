@@ -1,0 +1,145 @@
+[
+    {
+        "id": 1,
+        "name": "David Vincent Gurning",
+        "nickName": "David",
+        "class": "FSW-1",
+        "address": {
+            "province": "North Sumatera",
+            "city": "Medan"
+        },
+        "education": {
+            "bachelor": "Universitas Teknologi Del"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Yudriqul Aulia",
+        "nickName": "Yudi",
+        "class": "FSW-1",
+        "address": {
+            "province": "Jambi",
+            "city": "Jambi"
+        },
+        "education": {
+            "bachelor": "Universitas Jambi"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Iko Indra Gunawan",
+        "nickName": "Iko",
+        "class": "FSW-1",
+        "address": {
+            "province": "East Java",
+            "city": "Surabaya"
+        },
+        "education": {
+            "bachelor": "UPN Veteran Jatim"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Arwendo Erza Sadewa",
+        "nickName": "Erza",
+        "class": "FSW-1",
+        "address": {
+            "province": "Lampung",
+            "city": "Lampung"
+        },
+        "education": {
+            "bachelor": "UPN Veteran Jatim"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Dhiya Ul Faruq",
+        "nickName": "Faruq",
+        "class": "FSW-1",
+        "address": {
+            "province": "East Java",
+            "city": "Jember"
+        },
+        "education": {
+            "bachelor": "Universitas Jember"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Fariq Abdhe Manaf",
+        "nickName": "Fariq",
+        "class": "FSW-1",
+        "address": {
+            "province": "East Java",
+            "city": "Jember"
+        },
+        "education": {
+            "bachelor": "Universitas Jember"
+        }
+    },
+    {
+        "id": 7,
+        "name": "Bima Bagus",
+        "nickName": "Bima",
+        "class": "FSW-1",
+        "address": {
+            "province": "East Java",
+            "city": "Surabaya"
+        },
+        "education": {
+            "bachelor": "Institut Teknologi Sepuluh Nopember"
+        }
+    },
+    {
+        "id": 8,
+        "name": "Arya Prima",
+        "nickName": "Arya",
+        "class": "FSW-1",
+        "address": {
+            "province": "East Java",
+            "city": "Surabaya"
+        },
+        "education": {
+            "bachelor": "Universitas Airlangga"
+        }
+    },
+    {
+        "id": 9,
+        "name": "Dhimas Rasendriya",
+        "nickName": "Dhimas",
+        "class": "FSW-1",
+        "address": {
+            "province": "East Java",
+            "city": "Malang"
+        },
+        "education": {
+            "bachelor": "Universitas Muhammadiyah Malang"
+        }
+    },
+    {
+        "id": 10,
+        "name": "Jovina Gustari Juwita",
+        "nickName": "Jovina",
+        "class": "FSW-1",
+        "address": {
+            "province": "Jambi",
+            "city": "Jambi"
+        },
+        "education": {},
+        "profilePicture": "https://ik.imagekit.io/ikoindra/images_YKZV6_vZt.png"
+    },
+    {
+        "id": 11,
+        "name": "Harris Abdullah",
+        "nickName": "Abdul",
+        "class": "FSW-1",
+        "address": {
+            "province": "East Java",
+            "city": "Malang"
+        },
+        "education": {
+            "bachelor": "Universitas Negeri Malang"
+        },
+        "profilePicture": "https://ik.imagekit.io/ikoindra/png-transparent-doraemon-character-youtube-television-channel-doraemon-doraemon-television-cartoon-anime-thumbnail_PI18_lYil.png"
+    }
+]

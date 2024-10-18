@@ -19,6 +19,10 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.send("Hello World, I am using nodemon!");
+});
+
 // All routes define here
 app.use("/", router);
 

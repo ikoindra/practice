@@ -1,25 +1,31 @@
-## **POST /users**
+## **GET /users/:id/orders**
 
-Creates a new User and returns the new object.
+Returns all Orders associated with the specified user.
 
 - **URL Params**  
+  _Required:_ `id=[integer]`
+- **Data Params**  
   None
 - **Headers**  
-  Content-Type: application/json
--
-
-### **Data Params**
-
-```json
-{
-  "username": "string",
-  "email": "string",
-  "phoneNumber": "string",
-  "password": "string"
-}
-
-
+  Content-Type: application/json  
+  Authorization: Bearer `<OAuth Token>`
 - **Success Response:**
-- **Code:** 200
-  **Content:** { <user_object> }
+- **Code:** 200  
+  **Content:**
+
 ```
+{
+  orders: [
+           {<order_object>},
+           {<order_object>},
+           {<order_object>}
+         ]
+}
+```
+
+- **Error Response:**
+  - **Code:** 404  
+    **Content:** `{ error : "User doesn't exist" }`  
+    OR
+  - **Code:** 401  
+    **Content:** `{ error : error : "You are unauthorized to make this request." }`

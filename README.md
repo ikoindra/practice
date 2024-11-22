@@ -6,15 +6,20 @@ Creates a new User and returns the new object.
   None
 - **Headers**  
   Content-Type: application/json
-- **Data Params**
+-
 
+### **Data Params**
+
+```json
 {
-username: string,
-email: string,
-phoneNumber: string,
-password: string
+  "username": "string",
+  "email": "string",
+  "phoneNumber": "string",
+  "password": "string"
 }
 
+
 - **Success Response:**
-- **Code:** 200  
+- **Code:** 200
   **Content:** { <user_object> }
+```

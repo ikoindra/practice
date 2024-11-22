@@ -9,8 +9,9 @@ Add new user
 ```
   {
     "name": "string",
+    "last_name": "string",
     "email": "string",
-    "phoneNumber": "string",
+    "phone_number": "string",
     "password": "string"
   }
 ```
@@ -29,6 +30,30 @@ Add new user
      **Content:** `{ error : "Email or username already exists" }`
     ~~
 
+## **POST /register-otp**
+
+Send OTP
+
+- **URL Params**  
+  None
+- **Data Params**
+
+```
+  {
+    "otp-token": "string" // The OTP sent to the user's email or phone number
+  }
+```
+
+- **Headers**  
+  Content-Type: application/json
+- **Success Response:**
+- **Code:** 200  
+  **Content:** `{ <user_object> }`
+
+- **Error Response:**
+  - **Code:** 400 Bad Request  
+    **Content:** `{ error : "Invalid input data" }`
+
 ## **POST /login**
 
 Login user
@@ -39,8 +64,7 @@ Login user
 
 ```
   {
-    "email": "string",     // Required if phoneNumber is not provided
-    "phoneNumber": "string", // Required if email is not provided
+    "email": "string",
     "password": "string"
   }
 ```
@@ -58,3 +82,55 @@ Login user
   - **Code:** 404 Not Found  
      **Content:** `{ error: "User not found" }`
     ~~
+
+## **POST /reset-password**
+
+User forgot password
+
+- **URL Params**  
+  None
+- **Data Params**
+
+```
+  {
+    "email": "string",
+  }
+```
+
+- **Headers**  
+  Content-Type: application/json
+- **Success Response:**
+- **Code:** 200  
+  **Content:** `{ <user_object> }`
+
+- **Error Response:**
+  - **Code:** 400 Bad Request  
+    **Content:** `{ error : "Invalid input data" }`  
+    OR
+  - **Code:** 404 Not Found  
+     **Content:** `{ error: "User not found" }`
+    ~~
+
+## **PUT /change-password**
+
+User forgot password
+
+- **URL Params**  
+  None
+- **Data Params**
+
+```
+  {
+    "password": "string",
+  }
+```
+
+- **Headers**  
+  Content-Type: application/json
+- **Success Response:**
+- **Code:** 200  
+  **Content:** `{ <user_object> }`
+
+- **Error Response:**
+  - **Code:** 400 Bad Request  
+    **Content:** `{ error : "Password and confirm password don't match" }`

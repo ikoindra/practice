@@ -4,27 +4,22 @@ Add new user
 
 - **URL Params**  
   None
-- **Data Params**  
-  None
+- **Data Params**
+
+```
+  {
+    "username": "string",
+    "email": "string",
+    "phoneNumber": "string",
+    "password": "string"
+  }
+```
+
 - **Headers**  
-  None`
+  Content-Type: application/json
 - **Success Response:**
 - **Code:** 200  
-  **Content:**
-
-```
-{
-  user: [
-            {
-             "username": "string",
-             "email": "string",
-             "phoneNumber": "string",
-             "password": "string"
-            }
-
-         ]
-}
-```
+  **Content:** `{ <user_object> }`
 
 - **Error Response:**
   - **Code:** 400 Bad Request  

@@ -1,31 +1,35 @@
-## **GET /users/:id/orders**
+## **POST /register**
 
-Returns all Orders associated with the specified user.
+Add new user
 
 - **URL Params**  
-  _Required:_ `id=[integer]`
+  None
 - **Data Params**  
   None
 - **Headers**  
-  Content-Type: application/json  
-  Authorization: Bearer `<OAuth Token>`
+  None`
 - **Success Response:**
 - **Code:** 200  
   **Content:**
 
 ```
 {
-  orders: [
-           {<order_object>},
-           {<order_object>},
-           {<order_object>}
+  user: [
+            {
+             "username": "string",
+             "email": "string",
+             "phoneNumber": "string",
+             "password": "string"
+            }
+
          ]
 }
 ```
 
 - **Error Response:**
-  - **Code:** 404  
-    **Content:** `{ error : "User doesn't exist" }`  
+  - **Code:** 400 Bad Request  
+    **Content:** `{ error : "Invalid input data" }`  
     OR
-  - **Code:** 401  
-    **Content:** `{ error : error : "You are unauthorized to make this request." }`
+  - **Code:** 409 Conflict  
+     **Content:** `{ error : "Email or username already exists" }`
+    ~~

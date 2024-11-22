@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const userRepository = require("../repositories/users");
 const { imageUpload } = require("../utils/image-kit");
-const { NotFoundError } = require("../utils/request");
+const { Unauthorized } = require("../utils/request");
 const bcrypt = require("bcrypt");
 
 exports.register = async (data, file) => {
@@ -33,18 +33,13 @@ exports.login = async (data) => {
   // Find the user by email
   const user = await userRepository.getUserByEmail(data.email);
   if (!user) {
-    throw new NotFoundError("User not found");
+    throw new Unauthorized("Email is not registered");
   }
 
   // Compare the provided password using bcrypt
   const isPasswordValid = await bcrypt.compare(data.password, user.password);
   if (!isPasswordValid) {
-    throw new NotFoundError("Invalid email or password");
-  }
-
-  // Ensure BigInt fields are converted to strings
-  if (user.id) {
-    user.id = user.id.toString();
+    throw new Unauthorized("Invalid password");
   }
 
   // Generate a token

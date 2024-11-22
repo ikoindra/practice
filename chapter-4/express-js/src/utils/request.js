@@ -11,7 +11,7 @@ class NotFoundError extends Error {
     if (message) {
       super(message);
     } else {
-      super("Data is not found!");
+      super("Data is Not Found!");
     }
     this.status = 404;
   }
